@@ -30,7 +30,7 @@ var teamsaliases = {
   "STL": ['St. Louis Rams', 'St Louis Rams', 'Rams'],
   "TB": ['Tampa Bay Buccaneers', 'Buccaneers', 'Bucs'],
   "TEN": ['Tennessee Titans', 'Titans'],
-  "WAS": ['Washington Redskins', 'Redskins']
+  "WAS": ['Washington Redskins', 'Redskins', 'Skins', 'Washington Professional Football Team'] //Shoutout Bill Simmons
 }
 
 var seasonsq = /(more|less) than (\d{1,2}) (seasons|years)/i
@@ -56,11 +56,11 @@ var count = 0;
 
 function getvalues() {
 
-  var query = document.getElementById("query").value;
+  var query = $('#query').value;
 
-  document.getElementById('noresults').innerHTML = "";
-  document.getElementById('nofresults').innerHTML = "";
-  document.getElementById('result').innerHTML = "";
+  $('#noresults').empty();
+  $('#nofresults').empty();
+  $('#result').empty();
 
   seasons = seasonsq.exec(query);
   team = teamq.exec(query);
@@ -179,11 +179,11 @@ function getvalues() {
       });
 
       if (names.length < 1) {
-        document.getElementById('noresults').innerHTML = "No results <br> <img src='http://s3.amazonaws.com/br-cdn/temp_images/2013/10/07/TommyKellySad.gif'>";
+        $('#noresults').innerHTML = "No results <br> <img src='http://s3.amazonaws.com/br-cdn/temp_images/2013/10/07/TommyKellySad.gif'>";
       } else {
         var nOfMatches = document.createElement('div');
         nOfMatches.innerHTML = names.length + ' results found!<br>';
-        document.getElementById('nofresults').appendChild(nOfMatches);
+        $('#nofresults').appendChild(nOfMatches);
         names.sort();
         for (i = 0; i < names.length; i++) {
           var playerPanel = document.createElement('div');
@@ -192,7 +192,7 @@ function getvalues() {
           panelBody.className = 'panel-body';
           playerPanel.appendChild(panelBody);
           panelBody.innerHTML = names[i];
-          document.getElementById('result').appendChild(playerPanel);
+          $('#result').appendChild(playerPanel);
         }
         names = [];
         seasonsq.lastIndex = 0;
@@ -206,7 +206,7 @@ function getvalues() {
 
     });
   } else {
-    document.getElementById('noresults').innerHTML = "Invalid/empty query!";
+    $('#noresults').innerHTML = "Invalid/empty query!";
 
   }
 
