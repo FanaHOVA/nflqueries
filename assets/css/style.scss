@@ -13,11 +13,6 @@ h1 {
   color:$light;
 }
 
-.popover-queries {
-  color: $dark-text-color;
-  line-height: 200%;
-}
-
 html,body {
   height:100%;
   padding-top: 20px;
@@ -36,6 +31,11 @@ html,body {
 
 a {
     color: #ffd5d5;
+}
+
+p {
+  width:80%;margin: 0 auto;
+  color: #ffffff;
 }
 
 .readable {
