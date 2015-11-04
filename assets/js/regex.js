@@ -186,13 +186,23 @@ function getvalues() {
         document.getElementById('nofresults').appendChild(nOfMatches);
         names.sort();
         for (i = 0; i < names.length; i++) {
-          var playerPanel = document.createElement('div');
-          playerPanel.className = 'panel panel-default';
-          var panelBody = document.createElement('div');
-          panelBody.className = 'panel-body';
-          playerPanel.appendChild(panelBody);
-          panelBody.innerHTML = names[i];
-          document.getElementById('result').appendChild(playerPanel);
+          playerCard = '<blockquote class="quote-box">\
+                          <p class="quotation-mark">\
+                            “\
+                          </p>\
+                          <p class="quote-text">' + names[i] + '</p>\
+                          <hr>\
+                          <div class="blog-post-actions">\
+                            <p class="blog-post-bottom pull-left">\
+                              \
+                            </p>\
+                            <p class="blog-post-bottom pull-right">\
+                              <span class="badge quote-badge">896</span>  ❤\
+                            </p>\
+                          </div>\
+                        </blockquote>'
+
+          $(playerCard).appendTo('#result');
         }
         names = [];
         seasonsq.lastIndex = 0;
