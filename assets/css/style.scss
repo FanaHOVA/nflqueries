@@ -2,29 +2,20 @@ $dark-text-color: #363434;
 $dark-red: #630F1A;
 $mid-dark: #A10D21;
 $light: #378B2E;
+$title-font: 'Patua One', cursive;
+
+@import url(https://fonts.googleapis.com/css?family=Patua+One);
 
 h1 {
   color: #000;
+  font-family: $title-font;
+  font-size: 650%;
+  color:$light;
 }
 
 html,body {
   height:100%;
   padding-top: 20px;
-}
-
-.nflqueries {
-  font-family: Helvetica, sans-serif;
-  font-size: 650%;
-  color:$light;
-  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.9);
-
-}
-
-.abouttitle {
-  font-family: Helvetica, sans-serif;
-  font-size: 350%;
-  color:$light;
-  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.9);
 }
 
 .aboutparagraph {
@@ -115,6 +106,10 @@ p {
     max-width: 60%;
     margin-left: auto;
     margin-right:auto;
+}
+
+#query {
+  width: 100%;
 }
 
 @media screen and (max-width: 800px) {

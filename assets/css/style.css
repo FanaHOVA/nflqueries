@@ -1,21 +1,13 @@
+@import url(https://fonts.googleapis.com/css?family=Patua+One);
 h1 {
-  color: #000; }
+  color: #000;
+  font-family: "Patua One", cursive;
+  font-size: 650%;
+  color: #378B2E; }
 
 html, body {
   height: 100%;
   padding-top: 20px; }
-
-.nflqueries {
-  font-family: Helvetica, sans-serif;
-  font-size: 650%;
-  color: #eb6864;
-  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.9); }
-
-.abouttitle {
-  font-family: Helvetica, sans-serif;
-  font-size: 350%;
-  color: #eb6864;
-  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.9); }
 
 .aboutparagraph {
   text-shadow: 0px 0px 6px black;
@@ -48,23 +40,12 @@ p {
   font-size: 45px;
   margin: 15px; }
 
-.container-fluid {
-  margin: 0 auto;
-  width: 100%;
-  min-height: 100%;
-  background: url("http://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg") fixed no-repeat center;
-  background-size: cover; }
-
-.container-about {
+.main-container {
   margin: 0 auto;
   width: 100%;
   min-height: 100%;
   background: url("../bgabout.jpg") fixed no-repeat center;
   background-size: cover; }
-
-.container-full a {
-  color: #fffff;
-  text-decoration: none; }
 
 .v-center {
   margin-top: 2%; }
@@ -78,7 +59,7 @@ p {
 .success {
   font-weight: normal;
   font-style: italic;
-  color: #eb6864;
+  color: #378B2E;
   letter-spacing: 1pt;
   word-spacing: 2pt;
   font-size: 150%;
@@ -87,8 +68,8 @@ p {
 
 .noresults {
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
-  ont-style: italic;
-  color: #eb6864;
+  font-style: italic;
+  color: #378B2E;
   font-size: 220%; }
 
 .panel {
@@ -96,6 +77,9 @@ p {
   max-width: 60%;
   margin-left: auto;
   margin-right: auto; }
+
+#query {
+  width: 100%; }
 
 @media screen and (max-width: 800px) {
   .querybar {
