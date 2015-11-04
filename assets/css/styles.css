@@ -1,17 +1,17 @@
 html,body {
   height:100%;
   padding-top: 20px;
-} 
+}
 
 .row {
-     margin-left: 0px; 
+     margin-left: 0px;
      margin-right: 0px;
 }
 
 .nflqueries {
   font-family: Helvetica, sans-serif;
   font-size: 650%;
-  color:#eb6864;    
+  color:#eb6864;
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.9);
 
 }
@@ -19,7 +19,7 @@ html,body {
 .abouttitle {
   font-family: Helvetica, sans-serif;
   font-size: 350%;
-  color:#eb6864;    
+  color:#eb6864;
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.9);
 }
 
@@ -68,7 +68,7 @@ p {
   margin: 0 auto;
   width: 100%;
   min-height:100%;
-  background: url('/nflqueries/bg.jpg') fixed no-repeat center;
+  background: url('../bg.jpg') fixed no-repeat center;
   background-size: cover;
 }
 
@@ -76,7 +76,7 @@ p {
   margin: 0 auto;
   width: 100%;
   min-height:100%;
-  background: url('/nflqueries/bgabout.jpg') fixed no-repeat center;
+  background: url('../bgabout.jpg') fixed no-repeat center;
   background-size: cover;
 }
 
@@ -94,11 +94,11 @@ p {
     text-align:center;
     margin:0 auto;
     margin-top:1%;
-    
+
 }
-  
+
 .success {
-    
+
     font-weight:normal;
     font-style:italic;
     color:#eb6864;
@@ -111,12 +111,12 @@ p {
 }
 
 .noresults {
-    
+
     text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
     ont-style:italic;
     color:#eb6864;
     font-size:220%;
-    
+
 }
 
 .panel {
@@ -132,5 +132,5 @@ p {
     text-align:center;
     margin:0 auto;
 }
-  
+
 }
