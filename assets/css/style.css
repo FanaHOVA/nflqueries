@@ -8,13 +8,13 @@ html, body {
 .nflqueries {
   font-family: Helvetica, sans-serif;
   font-size: 650%;
-  color: #378B2E;
+  color: #eb6864;
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.9); }
 
 .abouttitle {
   font-family: Helvetica, sans-serif;
   font-size: 350%;
-  color: #378B2E;
+  color: #eb6864;
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.9); }
 
 .aboutparagraph {
@@ -48,12 +48,23 @@ p {
   font-size: 45px;
   margin: 15px; }
 
-.main-container {
+.container-fluid {
+  margin: 0 auto;
+  width: 100%;
+  min-height: 100%;
+  background: url("http://sass-lang.com/assets/img/logos/logo-b6e1ef6e.svg") fixed no-repeat center;
+  background-size: cover; }
+
+.container-about {
   margin: 0 auto;
   width: 100%;
   min-height: 100%;
   background: url("../bgabout.jpg") fixed no-repeat center;
   background-size: cover; }
+
+.container-full a {
+  color: #fffff;
+  text-decoration: none; }
 
 .v-center {
   margin-top: 2%; }
@@ -67,7 +78,7 @@ p {
 .success {
   font-weight: normal;
   font-style: italic;
-  color: #378B2E;
+  color: #eb6864;
   letter-spacing: 1pt;
   word-spacing: 2pt;
   font-size: 150%;
@@ -76,8 +87,8 @@ p {
 
 .noresults {
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
-  font-style: italic;
-  color: #378B2E;
+  ont-style: italic;
+  color: #eb6864;
   font-size: 220%; }
 
 .panel {
@@ -91,35 +102,5 @@ p {
     width: 90%;
     text-align: center;
     margin: 0 auto; } }
-#query-input {
-  margin: 0;
-  margin-top: 5px;
-  padding: 0; }
-  #query-input .search-query {
-    padding-right: 3px;
-    padding-left: 3px;
-    margin-bottom: 0;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    -webkit-transition: width  0.2s ease-in-out;
-    -moz-transition: width  0.2s ease-in-out;
-    -o-transition: width  0.2s ease-in-out;
-    transition: width  0.2s ease-in-out; }
-  #query-input button {
-    border: 0;
-    background: none;
-    padding: 2px 5px;
-    margin-top: 2px;
-    position: relative;
-    left: -28px;
-    margin-bottom: 0;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px; }
-  #query-input:focus + button {
-    z-index: 3; }
-  #query-input:focus {
-    width: 260px; }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=style.css.map */
