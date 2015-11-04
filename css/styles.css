@@ -1,34 +1,136 @@
 html,body {
   height:100%;
+  padding-top: 20px;
+} 
+
+.row {
+     margin-left: 0px; 
+     margin-right: 0px;
 }
 
-h1 {
-  font-family: Arial,sans-serif
-  font-size:80px;
-  color:#DDCCEE;
+.nflqueries {
+  font-family: Helvetica, sans-serif;
+  font-size: 650%;
+  color:#eb6864;    
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.9);
+
+}
+
+.abouttitle {
+  font-family: Helvetica, sans-serif;
+  font-size: 350%;
+  color:#eb6864;    
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.9);
+}
+
+.aboutparagraph {
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, 1);
+    font-size: 130%;
+}
+
+.footerparagraph {
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, 1);
+    font-size: 100%;
+}
+
+
+a {
+    color: #ffd5d5;
+}
+
+p {
+  width:80%;margin: 0 auto;
+  color: #ffffff;
+}
+
+.readable {
+  text-shadow: 0px 0px 6px rgba(0, 0, 0, 1);
+}
+
+.queries {
+    font-style: italic;
 }
 
 .lead {
-	color:#DDCCEE;
+	font-size:18px;
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.9);
+
 }
 
-
 /* Custom container */
-.container-full {
+
+.social-icon {
+    font-size: 45px;
+    margin: 15px;
+}
+
+.container-main {
   margin: 0 auto;
   width: 100%;
   min-height:100%;
-  background-color:#110022;
-  color:#eee;
-  overflow:hidden;
+  background: url('/nflqueries/bg.jpg') fixed no-repeat center;
+  background-size: cover;
+}
+
+.container-about {
+  margin: 0 auto;
+  width: 100%;
+  min-height:100%;
+  background: url('/nflqueries/bgabout.jpg') fixed no-repeat center;
+  background-size: cover;
 }
 
 .container-full a {
-  color:#efefef;
+  color:#fffff;
   text-decoration:none;
 }
 
 .v-center {
-  margin-top:7%;
+  margin-top:2%;
+}
+
+.querybar {
+    width:60%;
+    text-align:center;
+    margin:0 auto;
+    margin-top:1%;
+    
 }
   
+.success {
+    
+    font-weight:normal;
+    font-style:italic;
+    color:#eb6864;
+    letter-spacing:1pt;
+    word-spacing:2pt;
+    font-size:150%;
+    font-family:helvetica, sans-serif;
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, 1);
+
+}
+
+.noresults {
+    
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+    ont-style:italic;
+    color:#eb6864;
+    font-size:220%;
+    
+}
+
+.panel {
+    margin-bottom: 5px;
+    max-width: 60%;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+@media screen and (max-width: 800px) {
+    .querybar {
+    width:90%;
+    text-align:center;
+    margin:0 auto;
+}
+  
+}
