@@ -1,0 +1,76 @@
+$dark-text-color: #363434;
+$dark-red: #630f1a;
+$mid-dark: #a10d21;
+$light: #378b2e;
+$title-font: 'Patua One', cursive;
+@import url(https://fonts.googleapis.com/css?family=Patua+One);
+@import 'blockquote';
+@import 'team-styles';
+h1 {
+  font-family: $title-font;
+  font-size: 100px;
+  color: $mid-dark;
+  text-shadow: 3px 3px $dark-red,
+                4px 4px $dark-red,
+                5px 5px $dark-red;
+}
+html,
+body {
+  height: 100%;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.main-container {
+  margin: 0 auto;
+  width: 100%;
+  min-height: 100%;
+  background: url('../bgabout.jpg') fixed no-repeat center;
+  background-size: cover;
+  color: white;
+  font-family: helvetica, sans-serif;
+
+  .lead {
+    font-size: 18px;
+  }
+
+  .queries {
+    font-style: italic;
+    margin-top: 6%;
+  }
+
+  .success {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 150%;
+  }
+
+  .noresults {
+    font-weight: bold;
+    color: $light;
+    font-size: 220%;
+  }
+
+  .querybar {
+    width: 60%;
+    min-width: 290px;
+    margin: 0 auto;
+    color: $mid-dark;
+
+    input {
+      width: 100%;
+    }
+  }
+
+  .aboutparagraph {
+    font-size: 130%;
+  }
+
+  .footerparagraph {
+    font-size: 100%;
+  }
+
+  a {
+    color: #ffd5d5;
+  }
+}
