@@ -7,29 +7,24 @@ blockquote{
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-.quote-box{
 
+  hr {
+    margin: 15px 0px !important;
+  }
+
+.player-card {
     overflow: hidden;
     margin: 0 auto;
-    background-color: #4ADFCC;
     margin-top: 25px;
-    color:white;
     width: 325px;
-
+    margin-bottom: 15px;
 }
 
-.quotation-mark{
-
-    margin-top: -10px;
+.player-card-name {
     font-weight: bold;
-    font-size:100px;
-    color:white;
-    font-family: "Times New Roman", Georgia, Serif;
-
+    font-size:25px;
 }
 
-.quote-text{
-
+.player-card-infos {
     font-size: 19px;
-    margin-top: -65px;
 }

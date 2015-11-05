@@ -6,6 +6,7 @@ $title-font: 'Patua One', cursive;
 
 @import url(https://fonts.googleapis.com/css?family=Patua+One);
 @import 'blockquote';
+@import 'team-styles';
 
 h1 {
   color: #000;
@@ -34,23 +35,20 @@ a {
     color: #ffd5d5;
 }
 
-p {
-  width:80%;margin: 0 auto;
-  color: #ffffff;
-}
-
 .readable {
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 1);
+  color: white;
 }
 
 .queries {
     font-style: italic;
+    margin-top: 90px;
 }
 
 .lead {
 	font-size:18px;
   text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.9);
-
+  color: white;
 }
 
 /* Custom container */

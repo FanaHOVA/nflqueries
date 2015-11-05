@@ -49,7 +49,7 @@ var injuredq = /injured/i
 
 var nflteamq = /(Cardinals|Falcons|Ravens|Bills|Panthers|Bears|Bengals|Browns|Cowboys|Broncos|Lions|Packers|Texans|Colts|Jaguars|Chiefs|Dolphins|Vikings|Patriots|Saints|Giants|Jets|Raiders|Eagles|Steelers|Chargers|Seahawks|49ers|Rams|Buccaneers|Titans|Redskins)/
 
-var names = [];
+var players = [];
 
 
 var count = 0;
@@ -74,18 +74,21 @@ function getvalues() {
 
   if (seasons || team || jersey || weight || startswith || active || injured || nflteam) {
     $.getJSON("../../data/players.json", function(json) {
-      $.each(json, function(i, v) {
+      $.each(json, function(i, player) {
 
 
+        if (player.status != 'ACT') {
+          return;
+        }
 
         if (jersey && String(jersey[1])) {
-          if (String(v.number) != jersey[1]) {
+          if (String(player.number) != jersey[1]) {
             return;
           }
         }
 
         if (weight || weight2) {
-          pweight = parseInt(v.weight);
+          pweight = parseInt(player.weight);
           if (weight) {
             qweight = parseInt(weight[2]);
             moreless = String(weight[1]);
@@ -115,15 +118,15 @@ function getvalues() {
           if (String(startswith[1]) == 'first') {
             qstart = startswith[2];
             max = String(startswith[2]).length;
-            if (String(v.first_name).slice(0, max).toUpperCase() != qstart.toUpperCase()) {
+            if (String(player.first_name).slice(0, max).toUpperCase() != qstart.toUpperCase()) {
               return;
             }
-          } else if (String(v.last_name).slice(0, max).toUpperCase() != qstart.toUpperCase()) {
+          } else if (String(player.last_name).slice(0, max).toUpperCase() != qstart.toUpperCase()) {
             return;
           }
         }
 
-        if (team && v.college) {
+        if (team && player.college) {
 
           if (team[2] != undefined) {
             if (team[2] == 'St') {
@@ -134,13 +137,13 @@ function getvalues() {
           } else {
             collegeteam = team[1]
           }
-          if ((String(v.college).toLowerCase() != String(collegeteam).toLowerCase())) {
+          if ((String(player.college).toLowerCase() != String(collegeteam).toLowerCase())) {
             return;
           }
         }
 
-        if (seasons && v.years_pro) {
-          pseasons = parseInt(v.years_pro);
+        if (seasons && player.years_pro) {
+          pseasons = parseInt(player.years_pro);
           if (seasons[1] == 'more') {
             if (pseasons > parseInt(seasons[2])) {
               return;
@@ -151,60 +154,50 @@ function getvalues() {
           }
         }
 
-        if (active) {
-          if (v.status != 'ACT') {
-            return;
-          }
-        }
-
         if (injured) {
-          if (v.status != 'RES') {
+          if (player.status != 'RES') {
             return;
           }
         }
 
         if (nflteam) {
-          if (v.team === undefined) {
+          if (player.team === undefined) {
             return;
-          } else if (teamsaliases[v.team].indexOf(nflteam[1]) < 1) {
+          } else if (teamsaliases[player.team].indexOf(nflteam[1]) < 1) {
             return;
           }
         }
-
-
-
-        names.push(String(v.full_name));
-
-
+        players.push(player);
       });
 
-      if (names.length < 1) {
+      if (players.length < 1) {
         document.getElementById('noresults').innerHTML = "No results <br> <img src='http://s3.amazonaws.com/br-cdn/temp_images/2013/10/07/TommyKellySad.gif'>";
       } else {
+        $('.queries').empty();
         var nOfMatches = document.createElement('div');
-        nOfMatches.innerHTML = names.length + ' results found!<br>';
+        nOfMatches.innerHTML = players.length + ' results found!<br>';
         document.getElementById('nofresults').appendChild(nOfMatches);
-        names.sort();
-        for (i = 0; i < names.length; i++) {
-          playerCard = '<blockquote class="quote-box">\
-                          <p class="quotation-mark">\
-                            “\
+        players.sort();
+        for (i = 0; i < players.length; i++) {
+          playerCard = '<blockquote class="player-card ' + players[i].team + '">\
+                          <p class="player-card-name">\
+                            ' + players[i].full_name + '\
                           </p>\
-                          <p class="quote-text">' + names[i] + '</p>\
+                          <p class="player-card-infos">' + teamsaliases[players[i].team][0] + ' #' + players[i].number + '</p>\
                           <hr>\
                           <div class="blog-post-actions">\
-                            <p class="blog-post-bottom pull-left">\
-                              \
+                            <p class="pull-left">\
+                              From ' + players[i].college + '\
                             </p>\
-                            <p class="blog-post-bottom pull-right">\
-                              <span class="badge quote-badge">896</span>  ❤\
+                            <p class="pull-right">\
+                              ' + players[i].weight + 'lbs\
                             </p>\
                           </div>\
                         </blockquote>'
 
-          $(playerCard).appendTo('#result');
+          $('#result').append(playerCard);
         }
-        names = [];
+        players = [];
         seasonsq.lastIndex = 0;
         jerseyq.lastIndex = 0;
         teamq.lastIndex = 0;
