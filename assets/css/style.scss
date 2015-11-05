@@ -1,121 +1,76 @@
 $dark-text-color: #363434;
-$dark-red: #630F1A;
-$mid-dark: #A10D21;
-$light: #378B2E;
+$dark-red: #630f1a;
+$mid-dark: #a10d21;
+$light: #378b2e;
 $title-font: 'Patua One', cursive;
-
 @import url(https://fonts.googleapis.com/css?family=Patua+One);
 @import 'blockquote';
 @import 'team-styles';
-
 h1 {
-  color: #000;
   font-family: $title-font;
-  font-size: 650%;
-  color:$light;
+  font-size: 100px;
+  color: $mid-dark;
+  text-shadow: 3px 3px $dark-red,
+                4px 4px $dark-red,
+                5px 5px $dark-red;
 }
-
-html,body {
-  height:100%;
+html,
+body {
+  height: 100%;
   padding-top: 20px;
-}
-
-.aboutparagraph {
-    text-shadow: 0px 0px 6px rgba(0, 0, 0, 1);
-    font-size: 130%;
-}
-
-.footerparagraph {
-    text-shadow: 0px 0px 6px rgba(0, 0, 0, 1);
-    font-size: 100%;
-}
-
-
-a {
-    color: #ffd5d5;
-}
-
-.readable {
-  text-shadow: 0px 0px 6px rgba(0, 0, 0, 1);
-  color: white;
-}
-
-.queries {
-    font-style: italic;
-    margin-top: 90px;
-}
-
-.lead {
-	font-size:18px;
-  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.9);
-  color: white;
-}
-
-/* Custom container */
-
-.social-icon {
-    font-size: 45px;
-    margin: 15px;
+  text-align: center;
 }
 
 .main-container {
   margin: 0 auto;
   width: 100%;
-  min-height:100%;
+  min-height: 100%;
   background: url('../bgabout.jpg') fixed no-repeat center;
   background-size: cover;
-}
+  color: white;
+  font-family: helvetica, sans-serif;
 
-.v-center {
-  margin-top:2%;
-}
+  .lead {
+    font-size: 18px;
+  }
 
-.querybar {
-    width:60%;
-    text-align:center;
-    margin:0 auto;
-    margin-top:1%;
+  .queries {
+    font-style: italic;
+    margin-top: 6%;
+  }
 
-}
+  .success {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 150%;
+  }
 
-.success {
+  .noresults {
+    font-weight: bold;
+    color: $light;
+    font-size: 220%;
+  }
 
-    font-weight:normal;
-    font-style:italic;
-    color:$light;
-    letter-spacing:1pt;
-    word-spacing:2pt;
-    font-size:150%;
-    font-family:helvetica, sans-serif;
-    text-shadow: 0px 0px 6px rgba(0, 0, 0, 1);
+  .querybar {
+    width: 60%;
+    min-width: 290px;
+    margin: 0 auto;
+    color: $mid-dark;
 
-}
+    input {
+      width: 100%;
+    }
+  }
 
-.noresults {
+  .aboutparagraph {
+    font-size: 130%;
+  }
 
-    text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
-    font-style:italic;
-    color:$light;
-    font-size:220%;
+  .footerparagraph {
+    font-size: 100%;
+  }
 
-}
-
-.panel {
-    margin-bottom: 5px;
-    max-width: 60%;
-    margin-left: auto;
-    margin-right:auto;
-}
-
-#query {
-  width: 100%;
-}
-
-@media screen and (max-width: 800px) {
-    .querybar {
-    width:90%;
-    text-align:center;
-    margin:0 auto;
-}
-
+  a {
+    color: #ffd5d5;
+  }
 }

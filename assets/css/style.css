@@ -2,18 +2,19 @@
 blockquote {
   border-left: none; }
 
-.quote-badge {
-  background-color: rgba(0, 0, 0, 0.2); }
-
 hr {
   margin: 15px 0px !important; }
+
+.quote-badge {
+  background-color: rgba(0, 0, 0, 0.2); }
 
 .player-card {
   overflow: hidden;
   margin: 0 auto;
   margin-top: 25px;
-  width: 325px;
-  margin-bottom: 15px; }
+  width: 300px;
+  margin-bottom: 15px;
+  border-radius: 5px; }
 
 .player-card-name {
   font-weight: bold;
@@ -31,20 +32,22 @@ hr {
   color: #000; }
 
 .BAL {
-  background-color: #241773;
-  color: #9E7C0C; }
+  background-color: #241773; }
+  .BAL .player-card-name {
+    color: #9E7C0C; }
+  .BAL .player-card-infos, .BAL .player-card-footer {
+    color: white; }
 
 .BUF {
-  background-color: #00338D;
-  color: #C60C30; }
+  background-color: #00338D; }
+  .BUF .player-card-name {
+    color: white; }
+  .BUF .player-card-infos, .BUF .player-card-footer {
+    color: #C60C30; }
 
 .CAR {
   background-color: #0085CA;
   color: #000; }
-
-.CHI {
-  background-color: #0B162A;
-  color: #C83803; }
 
 .CHI {
   background-color: #0B162A;
@@ -59,16 +62,22 @@ hr {
   color: #FB4F14; }
 
 .DAL {
-  background-color: #002244;
-  color: #B0B7BC; }
-
-.DEN {
-  background-color: #FB4F14;
+  background-color: #B0B7BC;
   color: #002244; }
 
+.DEN {
+  background-color: #FB4F14; }
+  .DEN .player-card-name, .DEN .player-card-infos {
+    color: white; }
+  .DEN .player-card-footer {
+    color: #002244; }
+
 .DET {
-  background-color: #005A8B;
-  color: #000; }
+  background-color: #005A8B; }
+  .DET .player-card-name, .DET .player-card-infos {
+    color: #B0B7BC; }
+  .DET .player-card-footer {
+    color: #000; }
 
 .GB {
   background-color: #203731;
@@ -80,35 +89,53 @@ hr {
 
 .IND {
   background-color: #002C5F;
-  color: #A5ACAF; }
+  color: #FFF; }
 
 .JAC {
-  background-color: #000000;
-  color: #006778; }
+  background-color: #000000; }
+  .JAC .player-card-name, .JAC .player-card-infos {
+    color: #D7A22A; }
+  .JAC .player-card-footer {
+    color: #006778; }
 
 .KC {
-  background-color: #E31837;
-  color: #FFB612; }
+  background-color: #E31837; }
+  .KC .player-card-name, .KC .player-card-infos {
+    color: white; }
+  .KC .player-card-footer {
+    color: #FFB612; }
 
 .MIA {
-  background-color: #005778;
-  color: #F58220; }
+  background-color: #005778; }
+  .MIA .player-card-name, .MIA .player-card-infos {
+    color: white; }
+  .MIA .player-card-footer {
+    color: #F58220; }
 
 .MIN {
-  background-color: #4F2683;
-  color: #FFC62F; }
+  background-color: #4F2683; }
+  .MIN .player-card-name, .MIN .player-card-infos {
+    color: #FFC62F; }
+  .MIN .player-card-footer {
+    color: white; }
 
 .NE {
-  background-color: #002244;
-  color: #C60C30; }
+  background-color: #002244; }
+  .NE .player-card-name, .NE .player-card-infos {
+    color: white; }
+  .NE .player-card-footer {
+    color: #C60C30; }
 
 .NO {
   background-color: #000;
   color: #9F8958; }
 
 .NYG {
-  background-color: #0B2265;
-  color: #A71930; }
+  background-color: #0B2265; }
+  .NYG .player-card-name, .NYG .player-card-infos {
+    color: white; }
+  .NYG .player-card-footer {
+    color: #A71930; }
 
 .NYJ {
   background-color: #203731;
@@ -119,32 +146,47 @@ hr {
   color: #A5ACAF; }
 
 .PHI {
-  background-color: #004953;
-  color: #A5ACAF; }
+  background-color: #004953; }
+  .PHI .player-card-name, .PHI .player-card-infos {
+    color: white; }
+  .PHI .player-card-footer {
+    color: #A5ACAF; }
 
 .PIT {
   background-color: #000;
   color: #FFB612; }
 
 .SD {
-  background-color: #0073CF;
-  color: #FFB612; }
+  background-color: #002244; }
+  .SD .player-card-name, .SD .player-card-infos {
+    color: #FFB612; }
+  .SD .player-card-footer {
+    color: #0073CF; }
 
 .SEA {
-  background-color: #002244;
-  color: #69BE28; }
+  background-color: #002244; }
+  .SEA .player-card-name, .SEA .player-card-infos {
+    color: #69BE28; }
+  .SEA .player-card-footer {
+    color: white; }
 
 .SF {
-  background-color: #AA0000;
-  color: #B3995D; }
+  background-color: #AA0000; }
+  .SF .player-card-name, .SF .player-card-infos {
+    color: white; }
+  .SF .player-card-footer {
+    color: #B3995D; }
 
 .STL {
   background-color: #002244;
   color: #B3995D; }
 
 .TB {
-  background-color: #D50A0A;
-  color: #34302B; }
+  background-color: #D50A0A; }
+  .TB .player-card-name, .TB .player-card-infos {
+    color: white; }
+  .TB .player-card-footer {
+    color: #FF7900; }
 
 .TEN {
   background-color: #002244;
@@ -155,89 +197,50 @@ hr {
   color: #FFB612; }
 
 h1 {
-  color: #000;
   font-family: "Patua One", cursive;
-  font-size: 650%;
-  color: #378B2E; }
+  font-size: 100px;
+  color: #a10d21;
+  text-shadow: 3px 3px #630f1a, 4px 4px #630f1a, 5px 5px #630f1a; }
 
-html, body {
+html,
+body {
   height: 100%;
-  padding-top: 20px; }
-
-.aboutparagraph {
-  text-shadow: 0px 0px 6px black;
-  font-size: 130%; }
-
-.footerparagraph {
-  text-shadow: 0px 0px 6px black;
-  font-size: 100%; }
-
-a {
-  color: #ffd5d5; }
-
-.readable {
-  text-shadow: 0px 0px 6px black;
-  color: white; }
-
-.queries {
-  font-style: italic;
-  margin-top: 90px; }
-
-.lead {
-  font-size: 18px;
-  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.9);
-  color: white; }
-
-/* Custom container */
-.social-icon {
-  font-size: 45px;
-  margin: 15px; }
+  padding-top: 20px;
+  text-align: center; }
 
 .main-container {
   margin: 0 auto;
   width: 100%;
   min-height: 100%;
   background: url("../bgabout.jpg") fixed no-repeat center;
-  background-size: cover; }
-
-.v-center {
-  margin-top: 2%; }
-
-.querybar {
-  width: 60%;
-  text-align: center;
-  margin: 0 auto;
-  margin-top: 1%; }
-
-.success {
-  font-weight: normal;
-  font-style: italic;
-  color: #378B2E;
-  letter-spacing: 1pt;
-  word-spacing: 2pt;
-  font-size: 150%;
-  font-family: helvetica, sans-serif;
-  text-shadow: 0px 0px 6px black; }
-
-.noresults {
-  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
-  font-style: italic;
-  color: #378B2E;
-  font-size: 220%; }
-
-.panel {
-  margin-bottom: 5px;
-  max-width: 60%;
-  margin-left: auto;
-  margin-right: auto; }
-
-#query {
-  width: 100%; }
-
-@media screen and (max-width: 800px) {
-  .querybar {
-    width: 90%;
-    text-align: center;
-    margin: 0 auto; } }
+  background-size: cover;
+  color: white;
+  font-family: helvetica, sans-serif; }
+  .main-container .lead {
+    font-size: 18px; }
+  .main-container .queries {
+    font-style: italic;
+    margin-top: 6%; }
+  .main-container .success {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 150%; }
+  .main-container .noresults {
+    font-weight: bold;
+    color: #378b2e;
+    font-size: 220%; }
+  .main-container .querybar {
+    width: 60%;
+    min-width: 290px;
+    margin: 0 auto;
+    color: #a10d21; }
+    .main-container .querybar input {
+      width: 100%; }
+  .main-container .aboutparagraph {
+    font-size: 130%; }
+  .main-container .footerparagraph {
+    font-size: 100%; }
+  .main-container a {
+    color: #ffd5d5; }
 
 /*# sourceMappingURL=style.css.map */

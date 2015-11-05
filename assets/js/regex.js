@@ -179,13 +179,14 @@ function getvalues() {
         document.getElementById('nofresults').appendChild(nOfMatches);
         players.sort();
         for (i = 0; i < players.length; i++) {
-          playerCard = '<blockquote class="player-card ' + players[i].team + '">\
+          playerCard = '<div class="col-md-4">\
+                        <blockquote class="player-card ' + players[i].team + '">\
                           <p class="player-card-name">\
                             ' + players[i].full_name + '\
                           </p>\
                           <p class="player-card-infos">' + teamsaliases[players[i].team][0] + ' #' + players[i].number + '</p>\
                           <hr>\
-                          <div class="blog-post-actions">\
+                          <div class="player-card-footer">\
                             <p class="pull-left">\
                               From ' + players[i].college + '\
                             </p>\
@@ -193,7 +194,8 @@ function getvalues() {
                               ' + players[i].weight + 'lbs\
                             </p>\
                           </div>\
-                        </blockquote>'
+                        </blockquote>\
+                        </div>'
 
           $('#result').append(playerCard);
         }
