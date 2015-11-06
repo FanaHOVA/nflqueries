@@ -18,10 +18,16 @@ hr {
 
 .player-card-name {
   font-weight: bold;
-  font-size: 25px; }
+  font-size: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
 
 .player-card-infos {
-  font-size: 19px; }
+  font-size: 15px; }
+
+.player-card-footer {
+  font-size: 12px; }
 
 .ARI {
   background-color: #97233F;

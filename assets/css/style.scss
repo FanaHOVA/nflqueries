@@ -3,9 +3,12 @@ $dark-red: #630f1a;
 $mid-dark: #a10d21;
 $light: #378b2e;
 $title-font: 'Patua One', cursive;
+
 @import url(https://fonts.googleapis.com/css?family=Patua+One);
+
 @import 'blockquote';
 @import 'team-styles';
+
 h1 {
   font-family: $title-font;
   font-size: 100px;
