@@ -30,8 +30,10 @@ var teamsaliases = {
   "STL": ['St. Louis Rams', 'St Louis Rams', 'Rams'],
   "TB": ['Tampa Bay Buccaneers', 'Buccaneers', 'Bucs'],
   "TEN": ['Tennessee Titans', 'Titans'],
-  "WAS": ['Washington Redskins', 'Redskins']
+  "WAS": ['Washington Redskins', 'Redskins', 'Washington Professional Football Team', 'DC Grudens'] //S/o Bill Simmons and Joe House
 }
+
+var regexAliases = []
 
 var seasonsq = /(more|less) than (\d{1,2}) (seasons|years)/i
 
@@ -47,7 +49,12 @@ var startswithq = /(first|last) names? starts? with\sa?n?\s?(\w+)\b/i
 var activeq = /active/i
 var injuredq = /injured/i
 
-var nflteamq = /(Cardinals|Falcons|Ravens|Bills|Panthers|Bears|Bengals|Browns|Cowboys|Broncos|Lions|Packers|Texans|Colts|Jaguars|Chiefs|Dolphins|Vikings|Patriots|Saints|Giants|Jets|Raiders|Eagles|Steelers|Chargers|Seahawks|49ers|Rams|Buccaneers|Titans|Redskins)/
+Object.keys(teamsaliases).forEach(function (key) {
+    var array = teamsaliases[key];
+    $.merge(regexAliases, array);
+})
+
+var nflteamq = new RegExp(regexAliases.join('|'), "i");
 
 var players = [];
 
@@ -71,6 +78,7 @@ function getvalues() {
   active = activeq.exec(query);
   injured = injuredq.exec(query);
   nflteam = nflteamq.exec(query);
+  console.log(nflteamq.exec(query));
 
   if (seasons || team || jersey || weight || startswith || active || injured || nflteam) {
     $.getJSON("../../data/players.json", function(json) {
@@ -163,7 +171,7 @@ function getvalues() {
         if (nflteam) {
           if (player.team === undefined) {
             return;
-          } else if (teamsaliases[player.team].indexOf(nflteam[1]) < 1) {
+          } else if (teamsaliases[player.team].indexOf(nflteam[0]) < 1) {
             return;
           }
         }
