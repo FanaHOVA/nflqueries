@@ -219,7 +219,7 @@ function getvalues() {
 
     });
   } else {
-    document.getElementById('noresults').innerHTML = "Invalid/empty query!";
+    document.getElementById('noresults').innerHTML = "We don't have that kind of stat! Try again with a different query. <br> Search for number, name, college, weight and team!";
 
   }
 
