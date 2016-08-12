@@ -1,5 +1,5 @@
 blockquote{
-    border-left:none
+    border-left:none;
 }
 
 hr {
@@ -9,7 +9,6 @@ hr {
 .quote-badge{
   background-color: rgba(0, 0, 0, 0.2);
 }
-
 
 .player-card {
   overflow: hidden;
@@ -22,9 +21,16 @@ hr {
 
 .player-card-name {
   font-weight: bold;
-  font-size:25px;
+  font-size:20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .player-card-infos {
-  font-size: 19px;
+  font-size: 15px;
+}
+
+.player-card-footer {
+  font-size: 12px;
 }

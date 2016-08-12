@@ -3,7 +3,9 @@ $dark-red: #630f1a;
 $mid-dark: #a10d21;
 $light: #378b2e;
 $title-font: 'Patua One', cursive;
+
 @import url(https://fonts.googleapis.com/css?family=Patua+One);
+
 @import 'blockquote';
 @import 'team-styles';
 
@@ -15,13 +17,16 @@ h1 {
                 4px 4px $dark-red,
                 5px 5px $dark-red;
 }
-html,
-body {
+html, body {
   height: 100%;
   padding-top: 20px;
   text-align: center;
 }
 
+.container {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
 .main-container {
   margin: 0 auto;
   width: 100%;
@@ -46,10 +51,17 @@ body {
     font-size: 150%;
   }
 
-  .noresults {
+  .nofresults {
     font-weight: bold;
     color: $light;
-    font-size: 220%;
+    font-size: 20px;
+  }
+
+  .noresults {
+    font-weight: bold;
+    color: $mid-dark;
+    font-size: 20px;
+    text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.9);
   }
 
   .querybar {
