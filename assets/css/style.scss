@@ -6,8 +6,9 @@ $title-font: 'Patua One', cursive;
 @import url(https://fonts.googleapis.com/css?family=Patua+One);
 @import 'blockquote';
 @import 'team-styles';
+
 h1 {
-  font-family: $title-font;
+  font-family: $title-font, helvetica, sans-serif;;
   font-size: 100px;
   color: $mid-dark;
   text-shadow: 3px 3px $dark-red,
