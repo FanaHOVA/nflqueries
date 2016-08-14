@@ -1,0 +1,302 @@
+.ARI {
+  background-color: #97233F;
+  color: #000;
+  background-image: url("/assets/logos/cardinals.png");
+  background-position: center;
+  background-size: 100%;
+  object-fit: cover; }
+
+.ATL {
+  background-color: #A71930;
+  color: #000;
+  background-image: url("/assets/logos/falcons.png");
+  background-position: center;
+  background-size: 100%;
+  object-fit: cover; }
+
+.BAL {
+  background-color: #241773;
+  background-image: url("/assets/logos/ravens.png");
+  background-position: center;
+  background-size: 100%;
+  object-fit: cover; }
+  .BAL .player-card-name {
+    color: #9E7C0C; }
+  .BAL .player-card-infos, .BAL .player-card-footer {
+    color: white; }
+
+.BUF {
+  background-color: #00338D;
+  background-image: url("/assets/logos/bills.png");
+  background-position: center;
+  background-size: 100%;
+  object-fit: cover; }
+  .BUF .player-card-name {
+    color: white; }
+  .BUF .player-card-infos, .BUF .player-card-footer {
+    color: #C60C30; }
+
+.CAR {
+  background-color: #0085CA;
+  color: #000;
+  background-image: url("/assets/logos/panthers.png");
+  background-position: center;
+  background-size: 100%;
+  object-fit: cover; }
+
+.CHI {
+  background-color: #0B162A;
+  color: #C83803;
+  background-image: url("/assets/logos/bears.png");
+  background-position: center;
+  background-size: 100%;
+  object-fit: cover; }
+
+.CIN {
+  background-color: #000;
+  color: #FB4F14;
+  background-image: url("/assets/logos/bengals.png");
+  background-position: center;
+  background-size: 100%;
+  object-fit: cover; }
+
+.CLE {
+  background-color: #22150C;
+  color: #FB4F14;
+  background-image: url("/assets/logos/browns.png");
+  background-position: center;
+  background-size: 100%;
+  object-fit: cover; }
+
+.DAL {
+  background-color: #B0B7BC;
+  color: #002244;
+  background-image: url("/assets/logos/cowboys.png");
+  background-position: center;
+  background-size: 100%;
+  object-fit: cover; }
+
+.DEN {
+  background-color: #FB4F14;
+  background-image: url("/assets/logos/broncos.png");
+  background-position: center;
+  background-size: 100%;
+  object-fit: cover; }
+  .DEN .player-card-name, .DEN .player-card-infos {
+    color: white; }
+  .DEN .player-card-footer {
+    color: #002244; }
+
+.DET {
+  background-color: #005A8B;
+  background-image: url("/assets/logos/lions.png");
+  background-position: center;
+  background-size: 100%;
+  object-fit: cover; }
+  .DET .player-card-name, .DET .player-card-infos {
+    color: #B0B7BC; }
+  .DET .player-card-footer {
+    color: #000; }
+
+.GB {
+  background-color: #203731;
+  color: #FFB612;
+  background-image: url("/assets/logos/packers.png");
+  background-position: center;
+  background-size: 100%;
+  object-fit: cover; }
+
+.HOU {
+  background-color: #03202F;
+  color: #A71930;
+  background-image: url("/assets/logos/texans.png");
+  background-position: center;
+  background-size: 100%;
+  object-fit: cover; }
+
+.IND {
+  background-color: #002C5F;
+  color: #FFF;
+  background-image: url("/assets/logos/colts.png");
+  background-position: center;
+  background-size: 100%;
+  object-fit: cover; }
+
+.JAC {
+  background-color: #000000;
+  background-image: url("/assets/logos/jaguars.png");
+  background-position: center;
+  background-size: 100%;
+  object-fit: cover; }
+  .JAC .player-card-name, .JAC .player-card-infos {
+    color: #D7A22A; }
+  .JAC .player-card-footer {
+    color: #006778; }
+
+.KC {
+  background-color: #E31837;
+  background-image: url("/assets/logos/chiefs.png");
+  background-position: center;
+  background-size: 100%;
+  object-fit: cover; }
+  .KC .player-card-name, .KC .player-card-infos {
+    color: white; }
+  .KC .player-card-footer {
+    color: #FFB612; }
+
+.MIA {
+  background-color: #005778;
+  background-image: url("/assets/logos/dolphins.png");
+  background-position: center;
+  background-size: 100%;
+  object-fit: cover; }
+  .MIA .player-card-name, .MIA .player-card-infos {
+    color: white; }
+  .MIA .player-card-footer {
+    color: #F58220; }
+
+.MIN {
+  background-color: #4F2683;
+  background-image: url("/assets/logos/vikings.png");
+  background-position: center;
+  background-size: 100%;
+  object-fit: cover; }
+  .MIN .player-card-name, .MIN .player-card-infos {
+    color: #FFC62F; }
+  .MIN .player-card-footer {
+    color: white; }
+
+.NE {
+  background-color: #002244;
+  background-image: url("/assets/logos/patriots.png");
+  background-position: center;
+  background-size: 100%;
+  object-fit: cover; }
+  .NE .player-card-name, .NE .player-card-infos {
+    color: white; }
+  .NE .player-card-footer {
+    color: #C60C30; }
+
+.NO {
+  background-color: #000;
+  color: #9F8958;
+  background-image: url("/assets/logos/saints.png");
+  background-position: center;
+  background-size: 100%;
+  object-fit: cover; }
+
+.NYG {
+  background-color: #0B2265;
+  background-image: url("/assets/logos/giants.png");
+  background-position: center;
+  background-size: 100%;
+  object-fit: cover; }
+  .NYG .player-card-name, .NYG .player-card-infos {
+    color: white; }
+  .NYG .player-card-footer {
+    color: #A71930; }
+
+.NYJ {
+  background-color: #203731;
+  color: #FFF;
+  background-image: url("/assets/logos/jets.png");
+  background-position: center;
+  background-size: 100%;
+  object-fit: cover; }
+
+.OAK {
+  background-color: #000;
+  color: #A5ACAF;
+  background-image: url("/assets/logos/raiders.png");
+  background-position: center;
+  background-size: 100%;
+  object-fit: cover; }
+
+.PHI {
+  background-color: #004953;
+  background-image: url("/assets/logos/eagles.png");
+  background-position: center;
+  background-size: 100%;
+  object-fit: cover; }
+  .PHI .player-card-name, .PHI .player-card-infos {
+    color: white; }
+  .PHI .player-card-footer {
+    color: #A5ACAF; }
+
+.PIT {
+  background-color: #000;
+  color: #FFB612;
+  background-image: url("/assets/logos/steelers.png");
+  background-position: center;
+  background-size: 100%;
+  object-fit: cover; }
+
+.SD {
+  background-color: #002244;
+  background-image: url("/assets/logos/chargers.png");
+  background-position: center;
+  background-size: 100%;
+  object-fit: cover; }
+  .SD .player-card-name, .SD .player-card-infos {
+    color: #FFB612; }
+  .SD .player-card-footer {
+    color: #0073CF; }
+
+.SEA {
+  background-color: #002244;
+  background-image: url("/assets/logos/seahawks.png");
+  background-position: center;
+  background-size: 100%;
+  object-fit: cover; }
+  .SEA .player-card-name, .SEA .player-card-infos {
+    color: #69BE28; }
+  .SEA .player-card-footer {
+    color: white; }
+
+.SF {
+  background-color: #AA0000;
+  background-image: url("/assets/logos/49ers.png");
+  background-position: center;
+  background-size: 100%;
+  object-fit: cover; }
+  .SF .player-card-name, .SF .player-card-infos {
+    color: white; }
+  .SF .player-card-footer {
+    color: #B3995D; }
+
+.STL {
+  background-color: #002244;
+  color: #B3995D;
+  background-image: url("/assets/logos/rams.png");
+  background-position: center;
+  background-size: 100%;
+  object-fit: cover; }
+
+.TB {
+  background-color: #D50A0A;
+  background-image: url("/assets/logos/bucs.png");
+  background-position: center;
+  background-size: 100%;
+  object-fit: cover; }
+  .TB .player-card-name, .TB .player-card-infos {
+    color: white; }
+  .TB .player-card-footer {
+    color: #FF7900; }
+
+.TEN {
+  background-color: #002244;
+  color: #4B92DB;
+  background-image: url("/assets/logos/titans.png");
+  background-position: center;
+  background-size: 100%;
+  object-fit: cover; }
+
+.WAS {
+  background-color: #5B2B2F;
+  color: #FFB612;
+  background-image: url("/assets/logos/redskins.png");
+  background-position: center;
+  background-size: 100%;
+  object-fit: cover; }
+
+/*# sourceMappingURL=team-styles.css.map */

@@ -44,6 +44,8 @@ var jerseyq = /number (\d{1,2})\b/i
 var weightq = /weighs? (more|less) than (\d{1,3})/i
 var weight2q = /(under|over) (\d{1,3})/i
 
+var tallestq = /tallest/i
+
 var startswithq = /(first|last) names? starts? with\sa?n?\s?(\w+)\b/i
 
 var activeq = /active/i
@@ -78,7 +80,7 @@ function getvalues() {
   active = activeq.exec(query);
   injured = injuredq.exec(query);
   nflteam = nflteamq.exec(query);
-  console.log(nflteamq.exec(query));
+  tallest = tallestq.exec(query);
 
   if (seasons || team || jersey || weight || startswith || active || injured || nflteam) {
     $.getJSON("../../data/players.json", function(json) {
@@ -177,6 +179,22 @@ function getvalues() {
         }
         players.push(player);
       });
+
+      if (tallest) {
+        let tallest_player,
+            max_height = 0;
+
+        for (let j = 0; j < players.length; j++) {
+          let player = players[j];
+          if (player.height > max_height) {
+            tallest_player = player;
+            max_height = player.height;
+          }
+        }
+
+        players = [tallest_player];
+        console.log(players);
+      }
 
       if (players.length < 1) {
         document.getElementById('noresults').innerHTML = "No results <br> <img src='http://s3.amazonaws.com/br-cdn/temp_images/2013/10/07/TommyKellySad.gif'>";
