@@ -205,6 +205,11 @@ function getvalues() {
         document.getElementById('nofresults').appendChild(nOfMatches);
         players.sort();
         for (i = 0; i < players.length; i++) {
+          let height = players[i].height * 0.0833333;
+          let ft = parseInt(height),
+              inches = height % 1,
+              inches_d = parseInt(inches * 10);
+
           playerCard = '<div class="col-md-4">\
                         <blockquote class="player-card ' + players[i].team + '">\
                           <p class="player-card-name">\
@@ -217,7 +222,7 @@ function getvalues() {
                               From ' + players[i].college + '\
                             </p>\
                             <p class="pull-right">\
-                              ' + players[i].weight + 'lbs\
+                              ' + ft + '"' + inches_d + ' | '+ players[i].weight + 'lbs\
                             </p>\
                           </div>\
                         </blockquote>\
